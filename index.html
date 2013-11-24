@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<title>Startseite</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="index,follow">
+	<link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+	<link href="./media/css/style.css" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://www.jsviews.com/download/jsviews.js"></script>
+  	<script src="./media/js/jstorage.min.js"></script>
+  	<script src="./media/js/shopping-cart-app.js"></script>	
+	<!--[if lte IE 8]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+
+<div class="row" style="text-align: center;">
+        <div class="col-lg-4">          
+          <h2>Stern 1</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#" role="button" id="product1">Bestellen</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          
+          <h2>Stern 2</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button" id="product2">Bestellen</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          
+          <h2>Stern 3</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button" id="product3">Bestellen</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div>	
+		<div class="panel-group" id="accordion">
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+		          Dein Stern 
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse ">
+		      <div class="panel-body">
+		        <form role="form" id="form_stern1">
+					<fieldset>
+						<legend>Stern 1 kaufen</legend>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Taufname</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="John Doe">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Taufdatum</label>
+							<input type="date" class="form-control" id="exampleInputPassword1" placeholder="31/10/2013">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Persönliche Widmung</label>
+							<textarea class="form-control" rows="3" placeholder="Ihre Widmung"></textarea>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Extras</legend>
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    Rahmen
+						  </label>
+						</div>	
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    hochwertiges Briefpapier
+						  </label>
+						</div>	
+					</fieldset>
+
+				  <button class="btn btn-primary pull-right" id="add_to_cart1">Warenkorb</button>
+				</form>
+				<form role="form" id="form_stern2" style="display:none;">
+					<fieldset>
+						<legend>Stern 2 kaufen</legend>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Taufname</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="John Doe">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Taufdatum</label>
+							<input type="date" class="form-control" id="exampleInputPassword1" placeholder="31/10/2013">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Persönliche Widmung</label>
+							<textarea class="form-control" rows="3" placeholder="Ihre Widmung"></textarea>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Extras</legend>
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    Rahmen
+						  </label>
+						</div>	
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    hochwertiges Briefpapier
+						  </label>
+						</div>	
+					</fieldset>
+
+				  <button class="btn btn-primary pull-right" id="add_to_cart2">Warenkorb</button>
+				</form>	
+				<form role="form" id="form_stern3" style="display:none;">
+					<fieldset>
+						<legend>Stern 3 kaufen</legend>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Taufname</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="John Doe">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Taufdatum</label>
+							<input type="date" class="form-control" id="exampleInputPassword1" placeholder="31/10/2013">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Persönliche Widmung</label>
+							<textarea class="form-control" rows="3" placeholder="Ihre Widmung"></textarea>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Extras</legend>
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    Rahmen
+						  </label>
+						</div>	
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" value="">
+						    hochwertiges Briefpapier
+						  </label>
+						</div>	
+					</fieldset>
+
+				  <button class="btn btn-primary pull-right" id="add_to_cart3">Warenkorb</button>
+				</form>	
+		      </div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+		          Warenkorb
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseTwo" class="panel-collapse collapse">
+		      <div class="panel-body">
+		        <table class="table">
+			        <thead>
+			          <tr>
+			            <th>#</th>
+			            <th>Artikelname</th>
+			            <th></th>
+			            <th>Zwischensumme</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td>1</td>
+			            <td>
+			            	Zodiac<br>
+			            	<b>Taufname:</b> test<br>
+							<b>Taufdatum:</b> dasf<br>
+							<b>Sternbild:</b> Adler<br>
+							<b>Persönliche Widmung:</b> asdfasdf<br>
+							<b>Extras:</b> Drehbare Sternkarte<br>
+						</td>
+			            <td>Löschen</td>
+			            <td>79,99 €</td>
+			          </tr>
+			          <tr>
+			            <td>2</td>
+			            <td>
+			            	Zodiac<br>
+			            	<b>Taufname:</b> test<br>
+							<b>Taufdatum:</b> dasf<br>
+							<b>Sternbild:</b> Adler<br>
+							<b>Persönliche Widmung:</b> asdfasdf<br>
+							<b>Extras:</b> Drehbare Sternkarte<br>
+						</td>
+			            <td>Löschen</td>
+			            <td>79,99 €</td>
+			          </tr>
+
+			        </tbody>
+			      </table>
+					<div class="row">
+					  <div class="col-md-7">
+					  		&nbsp;
+					  </div>
+					  <div class="col-md-5">
+					  	<div class="well">
+							<table class="table">
+						        <tbody>
+						          <tr>
+						            <td>Gesamtsumme zzgl. MwSt.</td>
+						            <td>82,31 €</td>
+						          </tr>
+						          <tr>
+						            <td>MwSt. (19%)</td>
+						            <td>15,64 €</td>
+						          </tr>
+						          <tr>
+						            <td>Gesamtsumme inkl. MwSt.	</td>
+						            <td>97,95 €</td>
+						          </tr>
+						        </tbody>
+						    </table>					  	
+					  	</div>
+					  </div>
+					</div>	
+					<button class="btn btn-primary pull-right" id="go_to_delivery_payment">Versand- & Zahlungsinformationen</button>		      
+		      </div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+		          Versand- & Zahlungsinformationen
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseThree" class="panel-collapse collapse">
+		      <div class="panel-body">
+				<form role="form">
+					<fieldset>
+						<legend>Rechnungsinformation</legend>
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Vorname</label>
+										<input type="text" class="form-control" id="exampleInputEmail1" placeholder="John">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">Nachname</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Doe">
+									</div>						   
+							  </div>
+						</div>						
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">E-Mail</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="john.doe@email.de">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+								<div class="form-group">
+									<label for="exampleInputPassword1">Telefon</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="+49 123 45678">
+								</div>					   
+							  </div>
+						</div>	
+						<div class="form-group">
+							<label for="exampleInputPassword1">Adresse</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Waldweg 123">
+						</div>
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">PLZ</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="123456">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+								<div class="form-group">
+									<label for="exampleInputPassword1">Ort</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Musterhausen">
+								</div>				   
+							  </div>
+						</div>							
+					
+					</fieldset>
+					<fieldset>
+						<legend>Versandinformationen</legend>
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Vorname</label>
+										<input type="text" class="form-control" id="exampleInputEmail1" placeholder="John">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">Nachname</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Doe">
+									</div>						   
+							  </div>
+						</div>						
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">E-Mail</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="john.doe@email.de">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+								<div class="form-group">
+									<label for="exampleInputPassword1">Telefon</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="+49 123 45678">
+								</div>					   
+							  </div>
+						</div>	
+						<div class="form-group">
+							<label for="exampleInputPassword1">Adresse</label>
+							<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Waldweg 123">
+						</div>
+						<div class="row">
+							  <div class="col-xs-6">
+									<div class="form-group">
+										<label for="exampleInputPassword1">PLZ</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="123456">
+									</div>
+							  </div>
+							  <div class="col-xs-6">
+								<div class="form-group">
+									<label for="exampleInputPassword1">Ort</label>
+									<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Musterhausen">
+								</div>				   
+							  </div>
+						</div>							
+					
+					</fieldset>		
+					<fieldset>
+						<legend>Zahlungsweise</legend>	
+
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							    PayPal
+							  </label>
+							</div>
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							    Vorkasse
+							  </label>
+							</div>						
+							<div class="radio">
+							  <label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							    Nachname
+							  </label>
+							</div>													
+					</fieldset>							
+
+				  	<button class="btn btn-primary pull-right" id="add_to_cart">Bestellung abschliessen</button>
+				</form>		      
+				</div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h4 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+		          Bestellbestätigung
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseFour" class="panel-collapse collapse">
+		      <div class="panel-body">
+		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		      </div>
+		    </div>
+		  </div>		  
+		</div>	
+		
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$("#product1").click(function(){
+				$("#collapseOne").collapse('show')
+
+				$("#collapseOne").find('#form_stern1').show()
+				$("#collapseOne").find('#form_stern2').hide()
+				$("#collapseOne").find('#form_stern3').hide()
+
+			    return false			
+			})
+			$("#product2").click(function(){
+				$("#collapseOne").collapse('show')
+
+				$("#collapseOne").find('#form_stern1').hide()
+				$("#collapseOne").find('#form_stern2').show()
+				$("#collapseOne").find('#form_stern3').hide()
+
+			    return false			
+			})
+			$("#product3").click(function(){
+				$("#collapseOne").collapse('show')
+
+				$("#collapseOne").find('#form_stern1').hide()
+				$("#collapseOne").find('#form_stern2').hide()
+				$("#collapseOne").find('#form_stern3').show()
+
+			    return false			
+			})
+
+			$("#add_to_cart1").click(function(){
+				$("#collapseOne").collapse('hide')
+			    $("#collapseTwo").collapse('show')	
+			    return false			
+			})
+			$("#add_to_cart2").click(function(){
+				$("#collapseOne").collapse('hide')
+			    $("#collapseTwo").collapse('show')	
+			    return false			
+			})
+			$("#add_to_cart3").click(function(){
+				$("#collapseOne").collapse('hide')
+			    $("#collapseTwo").collapse('show')	
+			    return false			
+			})
+
+			$("#go_to_delivery_payment").click(function(){
+				$("#collapseTwo").collapse('hide')
+			    $("#collapseThree").collapse('show')	
+			    return false			
+			})
+
+		});
+	</script>
+</body>
+</html>
