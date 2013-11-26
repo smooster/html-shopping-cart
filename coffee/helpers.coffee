@@ -7,4 +7,5 @@ include = (klass, mixin) ->
 
 debuggerHelper = 
 	debugMsg: (msg) ->
+		return unless @debug
 		console.log(msg)		

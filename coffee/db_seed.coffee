@@ -23,6 +23,23 @@ products = [
   aluFramePrice: 15.0
 ]
 
+delivery_articles = 
+	default: 
+		name: "Versandkosten"
+		description: "Versand innerhalb Europas"
+		price: 7.9 
+		tax: 19.0
+	deutschland: 
+		name: "Versandkosten"
+		description: "Versand innerhalb Deutschlands"
+		price: 4.9 
+		tax: 19.0
+	nachname: 
+		name: "Nachnamegebühr"
+		price: 3.9 
+		tax: 19.0		
+
+
 #current selected product
 current_product = 
   id: 1

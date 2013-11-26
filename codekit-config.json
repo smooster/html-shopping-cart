@@ -2,15 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/media\/js\/app.js" : {
+    "\/media\/js\/bootstrap.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/app.js",
+      "inputAbbreviatedPath" : "\/media\/js\/bootstrap.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/app-ck.js",
+      "outputAbbreviatedPath" : "\/media\/js\/bootstrap.min-ck.js",
       "fileType" : 64
     },
     "\/coffee\/cart.coffee" : {
@@ -24,6 +24,17 @@
       "outputAbbreviatedPath" : "\/media\/js\/cart.js",
       "outputStyle" : 0,
       "fileType" : 32
+    },
+    "\/media\/js\/libaries.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/media\/js\/libaries.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/libaries-ck.js",
+      "fileType" : 64
     },
     "\/libs\/accounting.js" : {
       "ignoreWasSetByUser" : 0,
@@ -56,17 +67,16 @@
       "outputAbbreviatedPath" : "\/media\/js\/db_seed-ck.js",
       "fileType" : 64
     },
-    "\/coffee\/shopping-cart-app.coffee" : {
+    "\/media\/js\/jquery.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coffee\/shopping-cart-app.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/media\/js\/shopping-cart-app.js",
-      "outputStyle" : 0,
-      "fileType" : 32
+      "inputAbbreviatedPath" : "\/media\/js\/jquery.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/jquery.min-ck.js",
+      "fileType" : 64
     },
     "\/coffee\/view.converters.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -80,16 +90,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/media\/js\/jquery.min.js" : {
+    "\/coffee\/shopping-cart-app.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/jquery.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/jquery.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/coffee\/shopping-cart-app.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/media\/js\/shopping-cart-app.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/media\/css\/bootstrap-theme.min.css" : {
       "ignoreWasSetByUser" : 0,
@@ -109,17 +120,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/coffee\/db_seed.coffee" : {
+    "\/libs\/jstorage.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coffee\/db_seed.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/db_seed.js",
-      "outputStyle" : 0,
-      "fileType" : 32
+      "inputAbbreviatedPath" : "\/libs\/jstorage.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/libs\/jstorage.min-ck.js",
+      "fileType" : 64
     },
     "\/media\/js\/jquery.js" : {
       "ignoreWasSetByUser" : 0,
@@ -132,16 +142,17 @@
       "outputAbbreviatedPath" : "\/media\/js\/jquery-ck.js",
       "fileType" : 64
     },
-    "\/libs\/jstorage.min.js" : {
+    "\/coffee\/db_seed.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/libs\/jstorage.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/libs\/jstorage.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/coffee\/db_seed.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/db_seed.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/media\/css\/bootstrap.css" : {
       "ignoreWasSetByUser" : 0,
@@ -211,15 +222,6 @@
       "outputAbbreviatedPath" : "\/media\/js\/bootstrap-ck.js",
       "fileType" : 64
     },
-    "\/media\/css\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/css\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/coffee\/app.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -232,14 +234,14 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/index.html" : {
+    "\/media\/css\/style.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
+      "inputAbbreviatedPath" : "\/media\/css\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/media\/background.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -252,6 +254,15 @@
       "initialSize" : 1895448,
       "fileType" : 4096
     },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/media\/css\/bootstrap-theme.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -261,16 +272,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/media\/js\/bootstrap.min.js" : {
+    "\/coffee\/address.coffee" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/bootstrap.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/bootstrap.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/coffee\/address.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/address.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/coffee\/helpers.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -284,6 +296,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
+    "\/media\/js\/app.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/media\/js\/app.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/app-ck.js",
+      "fileType" : 64
+    },
     "\/coffee\/article.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -296,16 +319,17 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/media\/js\/libaries.js" : {
+    "\/coffee\/payment.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/libaries.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/libaries-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/coffee\/payment.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/payment.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     }
   },
   "manualImportLinks" : [

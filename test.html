@@ -19,27 +19,6 @@
 
 <div id="current_product"></div>
 
-<script id="current_productTmpl" type="text/x-jsrender">
-<div>  
-	<div><em>Name:</em> {^{:name}}</div>
-	{^{if star_picture }}
-	<div>
-		<label>Sternen Bild auswaehlen:</label> <input type="checkbox" data-link="showNickname"/>
-	</div>
-	{{/if}}
-	<div>
-	  <label>Stern taufen:</label> <input data-link="your_name"/>      
-	</div>
-	<div>
-		<label>Aluminium Rahmen:</label> <input type="checkbox" data-link="aluFrame"/> <span data-link="{formatMoney:aluFramePrice}"></span>
-	</div>    
-	<div>
-		 Summe: <span data-link="gross_sum"></span>
-	</div>    
-	<button class="btn btn-primary pull-right" id="add_to_cart">In den Warenkorb legen</button>
-</div>
-</script>
-
 <div id="cart">
 	<table class="table">
         <thead>
@@ -81,18 +60,101 @@
 	</div>	
 </div>
 
+<div id="invoice"></div>
+<div id="delivery"></div>
+
+<div><button class="btn btn-primary pull-right" id="next_to_overview">Weiter</button></div>
+
+<div id="deliveryOutput"></div>
+<div id="cartOutput">
+	<table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Artikelname</th>
+            <th>Zwischensumme</th>
+          </tr>
+        </thead>
+        <tbody id="cartItemsOutput">
+          
+        </tbody>
+      </table>
+	<div class="row">
+	  <div class="col-md-7">
+	  		&nbsp;
+	  </div>
+	  <div class="col-md-5">
+	  	<div class="well" id="cartSumOutput">
+			<table class="table">
+		        <tbody>
+		          <tr>
+		            <td>Gesamtsumme zzgl. MwSt.</td>
+		            <td>82,31 €</td>
+		          </tr>
+		          <tr>
+		            <td>MwSt. (19%)</td>
+		            <td>15,64 €</td>
+		          </tr>
+		          <tr>
+		            <td>Gesamtsumme inkl. MwSt.	</td>
+		            <td>97,95 €</td>
+		          </tr>
+		        </tbody>
+		    </table>					  	
+	  	</div>
+	  </div>
+	</div>	
+</div>
+
+<script id="current_productTmpl" type="text/x-jsrender">
+<div>  
+	<div><em>Name:</em> {^{:name}}</div>
+	{^{if star_picture }}
+	<div>
+		<label>Sternen Bild auswaehlen:</label> <input type="checkbox" data-link="showNickname"/>
+	</div>
+	{{/if}}
+	<div>
+	  <label>Stern taufen:</label> <input data-link="your_name"/>      
+	</div>
+	<div>
+		<label>Aluminium Rahmen:</label> <input type="checkbox" data-link="aluFrame"/> <span data-link="{formatMoney:aluFramePrice}"></span>
+	</div>    
+	<div>
+		 Summe: <span data-link="{formatMoney:gross_sum}"></span>
+	</div>    
+	<button class="btn btn-primary pull-right" id="add_to_cart">In den Warenkorb legen</button>
+</div>
+</script>
+
 <script id="cartItemTmpl" type="text/x-jsrender">
 <tr>
 	<td> {{:#index + 1}}</td>
 	<td>
 		{^{:product.name}}<br>
-		<b>Taufname:</b> {^{:product.your_name}}<br>
-		<b>Taufdatum:</b> dasf<br>
-		<b>Sternbild:</b> Adler<br>
-		<b>Persönliche Widmung:</b> asdfasdf<br>
-		<b>Extras:</b> Drehbare Sternkarte<br>
+		{^{if product.description}}{^{:product.description}}<br>{{/if}}
+		{^{if product.your_name}}<b>Taufname:</b> {^{:product.your_name}}<br>{{/if}}
+		{^{if product.your_name}}<b>Taufdatum:</b> dasf<br>{{/if}}
+		{^{if product.your_name}}<b>Sternbild:</b> Adler<br>{{/if}}
+		{^{if product.your_name}}<b>Persönliche Widmung:</b> asdfasdf<br>{{/if}}
+		{^{if product.your_name}}<b>Extras:</b> Drehbare Sternkarte<br>{{/if}}
 	</td>
-	<td><a href="#" class="remove_item">Löschen</a></td>
+	<td class="remove_item_column"><a href="#" class="remove_item">Löschen</a></td>
+	<td>{^{formatMoney:price}}</td>
+</tr>
+</script>
+<script id="cartItemOutputTmpl" type="text/x-jsrender">
+<tr>
+	<td> {{:#index + 1}}</td>
+	<td>
+		{^{:product.name}}<br>
+		{^{if product.description}}{^{:product.description}}<br>{{/if}}
+		{^{if product.your_name}}<b>Taufname:</b> {^{:product.your_name}}<br>{{/if}}
+		{^{if product.your_name}}<b>Taufdatum:</b> dasf<br>{{/if}}
+		{^{if product.your_name}}<b>Sternbild:</b> Adler<br>{{/if}}
+		{^{if product.your_name}}<b>Persönliche Widmung:</b> asdfasdf<br>{{/if}}
+		{^{if product.your_name}}<b>Extras:</b> Drehbare Sternkarte<br>{{/if}}
+	</td>
 	<td>{^{formatMoney:price}}</td>
 </tr>
 </script>
@@ -115,6 +177,123 @@
     </tbody>
 </table>
 </script>
+
+
+<script id="addressTmpl" type="text/x-jsrender">
+<form role="form">
+	<fieldset>
+		<legend>{{:name}}</legend>
+		<div class="row">
+			  <div class="col-xs-6">
+					<div class="form-group">
+						<label for="firstname">Vorname</label>
+						<input type="text" class="form-control" id="firstname" placeholder="John" data-link="address.firstname">
+					</div>
+			  </div>
+			  <div class="col-xs-6">
+					<div class="form-group">
+						<label for="lastname">Nachname</label>
+						<input type="text" class="form-control" id="lastname" placeholder="Doe" data-link="address.lastname">
+					</div>						   
+			  </div>
+		</div>						
+		<div class="row">
+			  <div class="col-xs-6">
+					<div class="form-group">
+						<label for="mail">E-Mail</label>
+						<input type="text" class="form-control" id="mail" placeholder="john.doe@email.de" data-link="address.mail">
+					</div>
+			  </div>
+			  <div class="col-xs-6">
+				<div class="form-group">
+					<label for="phone">Telefon</label>
+					<input type="text" class="form-control" id="phone" placeholder="+49 123 45678" data-link="address.phone">
+				</div>					   
+			  </div>
+		</div>	
+		<div class="form-group">
+			<label for="street">Adresse</label>
+			<input type="text" class="form-control" id="street" placeholder="Waldweg 123" data-link="address.street">
+		</div>
+		<div class="row">
+			  <div class="col-xs-6">
+					<div class="form-group">
+						<label for="postcode">PLZ</label>
+						<input type="text" class="form-control" id="postcode" placeholder="123456" data-link="address.postcode">
+					</div>
+			  </div>
+			  <div class="col-xs-6">
+				<div class="form-group">
+					<label for="city">Ort</label>
+					<input type="text" class="form-control" id="city" placeholder="Musterhausen" data-link="address.city">
+				</div>				   
+			  </div>
+		</div>	
+		<div class="form-group">
+			<label for="country">Land</label>
+			<select id="country" data-link="address.country">
+			  <option value="Deutschland">Deutschland</option>
+			  <option value="Österreich">Österreich</option>
+			  <option value="Schweiz">Schweiz</option>
+			  <option value="Frankreich">Frankreich</option>
+			</select>
+		</div>	
+	{^{if name == "Rechnungsinformation"}}
+		<div class="radio">
+			  <label>
+			    <input type="radio" name="invoiceAndDeliveryAddress" value="true" data-link="address.invoiceAndDeliveryAddress">
+			    Rechungsanschrift gleich Versandanschrift
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="invoiceAndDeliveryAddress" value="false" data-link="address.invoiceAndDeliveryAddress">
+			    Gesonderte Versandanschrift
+			  </label>
+			</div>	
+	{{/if}}			
+	</fieldset>
+
+	{^{if name == "Versandinformation"}}
+	<fieldset>
+		<legend>Zahlungsweise</legend>	
+
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="payment" value="paypal" data-link="payment.type">
+			    PayPal
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="payment" value="vorkasse" data-link="payment.type">
+			    Vorkasse
+			  </label>
+			</div>	
+			{^{if address.country == "Deutschland"}}					
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="payment" value="nachname" data-link="payment.type">
+			    Nachname
+			  </label>
+			</div>		
+			{{/if}}											
+	</fieldset>	
+	{{/if}}
+</form>
+</script>
+
+
+<script id="addressOutputTmpl" type="text/x-jsrender">
+
+<div>
+	Vorname: {^{:firstname}}
+</div>
+<div>
+	Nachname: {^{:lastname}}
+</div>
+</script>
+
 
 
 </body>

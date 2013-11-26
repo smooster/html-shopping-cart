@@ -6,14 +6,18 @@ class kauCart
 	constructor: (cart_list)->
 		@cart_list = new Array
 		if cart_list
-		  @cart_list = cart_list
-		  @clearance()
+			clean_cart_list = new Array
+			$.each cart_list, (index, value) ->
+				clean_cart_list.push(value) if typeof value == 'object' && value.delivery == false
+			@cart_list = clean_cart_list	
+			@clearance()
 
-	add: (product, price, quantity=1) ->
+	add: (product, price, quantity=1, delivery=false) ->
 		cart_item = 
 		  product: product
 		  price: price
 		  quantity: quantity
+		  delivery: delivery
 		extend cart_item, cartItemHelper
 		$.observable(@cart_list).insert(cart_item)		
 		@debugMsg "added #{quantity} #{product} with #{price}"
