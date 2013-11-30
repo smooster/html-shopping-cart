@@ -3451,4 +3451,4 @@ var viewevents = module.exports = {
      Begin libaries.js
 ********************************************** */
 
-// @codekit-prepend "accounting.js", "jstorage.min.js", "minicart.js"
+// @codekit-prepend "accounting.js", "jstorage.min.js", "minicart.js", "jsviews.js"
