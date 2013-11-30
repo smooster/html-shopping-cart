@@ -2,15 +2,15 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/media\/js\/bootstrap.min.js" : {
+    "\/media\/js\/libaries.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/bootstrap.min.js",
+      "inputAbbreviatedPath" : "\/media\/js\/libaries.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/bootstrap.min-ck.js",
+      "outputAbbreviatedPath" : "\/media\/js\/libaries-ck.js",
       "fileType" : 64
     },
     "\/coffee\/cart.coffee" : {
@@ -25,15 +25,15 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/media\/js\/libaries.js" : {
+    "\/media\/js\/bootstrap.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/media\/js\/libaries.js",
+      "inputAbbreviatedPath" : "\/media\/js\/bootstrap.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/libaries-ck.js",
+      "outputAbbreviatedPath" : "\/media\/js\/bootstrap.min-ck.js",
       "fileType" : 64
     },
     "\/libs\/accounting.js" : {
@@ -120,16 +120,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/libs\/jstorage.min.js" : {
+    "\/coffee\/db_seed.coffee" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/libs\/jstorage.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/libs\/jstorage.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/coffee\/db_seed.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/media\/js\/db_seed.js",
+      "outputStyle" : 0,
+      "fileType" : 32
     },
     "\/media\/js\/jquery.js" : {
       "ignoreWasSetByUser" : 0,
@@ -142,17 +143,16 @@
       "outputAbbreviatedPath" : "\/media\/js\/jquery-ck.js",
       "fileType" : 64
     },
-    "\/coffee\/db_seed.coffee" : {
+    "\/libs\/jstorage.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coffee\/db_seed.coffee",
-      "checkOutputStyle" : 0,
-      "minifyOutput" : 1,
-      "outputAbbreviatedPath" : "\/media\/js\/db_seed.js",
-      "outputStyle" : 0,
-      "fileType" : 32
+      "inputAbbreviatedPath" : "\/libs\/jstorage.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/libs\/jstorage.min-ck.js",
+      "fileType" : 64
     },
     "\/media\/css\/bootstrap.css" : {
       "ignoreWasSetByUser" : 0,
@@ -200,6 +200,17 @@
       "outputAbbreviatedPath" : "\/media\/js\/libaries.js",
       "fileType" : 64
     },
+    "\/libs\/minicart.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/libs\/minicart.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/libs\/minicart-ck.js",
+      "fileType" : 64
+    },
     "\/media\/js\/shopping-cart-app.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -243,6 +254,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/media\/background.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -253,15 +273,6 @@
       "outputAbbreviatedPath" : "\/media\/background.jpg",
       "initialSize" : 1895448,
       "fileType" : 4096
-    },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/media\/css\/bootstrap-theme.css" : {
       "ignoreWasSetByUser" : 0,

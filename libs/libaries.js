@@ -1,1 +1,1 @@
-// @codekit-prepend "accounting.js", "jstorage.min.js"
+// @codekit-prepend "accounting.js", "jstorage.min.js", "minicart.js"
